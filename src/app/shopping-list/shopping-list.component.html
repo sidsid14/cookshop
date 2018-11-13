@@ -2,14 +2,14 @@
   <div class="col-md-10">
     <app-shopping-edit></app-shopping-edit>
     <hr>
-    <div class="list-group">
-      <a href="#" class="list-group-item list-group-item-action active">
-        Cras justo odio
+
+    <div class="list-group" *ngFor="let ingredient of ingredients">
+      <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+        {{ingredient.name}}
+        <span class="badge badge-primary badge-pill">{{ingredient.amount}}</span>
       </a>
-      <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-      <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-      <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-      <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
     </div>
+
+  
   </div>
 </div>
